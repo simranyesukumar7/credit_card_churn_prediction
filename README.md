@@ -11,6 +11,7 @@ Determining and visualizing the factors that are a major cause of customer churn
 Building a prediction model that will not only determine if a client is going to churn or not but will also choose a model that will also connect a probability to the churn to make customer services aware of the high-risk clients so that they can function accordingly. 
 
 **Metadata**
+
 Row Number: This column contains a unique row number.
 Customer ID:  It is a unique column that contains a unique number for every individual client.
 Surname:  This column contains the client’s last name which is a character value.
