@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Credit Card Churn Prediction</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+    
+h1 {
+  color: green;
+  text-align: center;
+}
+    
+button {
+    appearance: auto;
+    writing-mode: horizontal-tb !important;
+    font-style: ;
+    font-variant-ligatures: ;
+    font-variant-caps: ;
+    font-variant-numeric: ;
+    font-variant-east-asian: ;
+    font-weight: ;
+    font-stretch: ;
+    font-size: ;
+    font-family: ;
+    text-rendering: auto;
+    color: white;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: #04AA6D;
+    margin: 4px 2px;;
+    padding: 16px 32px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+}
+</style>
+</head>
+
+<body>
+ <div class="login">
+    <form action="{{ url_for('predict')}}"method="post">
+        <h1> Credit Card Churn Prediction </h1>
+    	Credit Score <input type="text" name="CreditScore" placeholder="CreditScore" required="required"/>
+        <br><br>
+        Age <input type="text" name="Age" placeholder="Age" required="required" />
+        <br><br>
+		Tenure <input type="text" name="Tenure" placeholder="Tenure" required="required" />
+        <br><br>
+		Balance <input type="text" name="Balance" placeholder="Balance" required="required" />
+        <br><br>
+        Num Of Products <input type="text" name="NumOfProducts" placeholder="NumOfProducts" required="required" />
+        <br><br>
+		Has a Cr Card <input type="text" name="HasCrCard" placeholder="HasCrCard" required="required" />
+        <br><br>
+        Is Active Member <input type="text" name="IsActiveMember" placeholder="IsActiveMember" required="required" />
+        <br><br>
+        Estimated Salary <input type="text" name="EstimatedSalary" placeholder="EstimatedSalary" required="required" />
+        <br>
+        <button type="submit">Predict</button>
+    </form>
+   <h1> {{ prediction_text }} </h1>
+ </div>
+</body>
+</html>
