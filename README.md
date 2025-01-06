@@ -1,29 +1,72 @@
-# Credit Card Churn Prediction
+# 💳 Credit Card Churn Prediction
 
-Customer churn is a term that is described as a percentage of customers who terminate or discontinue their ties with a firm or industry or with some services which means they no longer use the services of a particular company. It has been observed over the years that customers, especially in the banking industry, have numerous choices, and hence, they frequently shift from one credit card company to another whenever they find good deals or services. Hence, this leads to a churning rate of 13% in this competitive industrial market. 
-It is impossible to keep the knowledge of every customer because these firms are huge and have a large number of customers hence, they cannot invest this much time with each customer. It will increase the cost which will eventually outweigh the revenue.  However, if a credit card company can predict which portion of their customers tends to leave them and then can shift all their customer retention efforts to these particular customers and hence, can reduce the overall churning rate of the bank. Generally, every company’s main agenda is to earn customer loyalty and expand its business. 
-To identify early signs of churns, a bank must initially develop a comprehensive view of its clients and their interactions over different platforms which includes branch visits, purchase history of the product, and even interactions over social media, etc. This will result in maintaining a position in this competitive market and also let them challenge their competitors.  
+Customer churn refers to the percentage of customers who terminate or discontinue their relationship with a company. In the banking industry, customers often switch credit card companies based on offers or services, leading to a churn rate of 13%. Predicting customer churn allows companies to focus retention efforts on high-risk clients and reduce overall churn.
 
-**Objective** 
+This project involves building a predictive model that can identify which customers are likely to churn based on their behaviors and interactions with the company. By using machine learning techniques, we aim to predict churn probability and assist banks in retaining their most valuable customers.
 
-The main objectives of the project are as follows: 
-Determining and visualizing the factors that are a major cause of customer churn in banks.
-Building a prediction model that will not only determine if a client is going to churn or not but will also choose a model that will also connect a probability to the churn to make customer services aware of the high-risk clients so that they can function accordingly. 
+## 📂 Dataset
 
-**Metadata**
+The dataset used for this project is the **Churn_Modelling.csv**, available on Kaggle. It contains data about bank customers, including their personal details, account status, and behaviors.
 
-Row Number: This column contains a unique row number.
-Customer ID:  It is a unique column that contains a unique number for every individual client.
-Surname:  This column contains the client’s last name which is a character value.
-CreditScore: This column contains numeric values which are the client’s credit card scores. 
-Geography: This column contains the names of the places from all over the world which are character datatype.
-Gender: This column contains two values i.e., “Male” and “Female” 
-Age: This column contains numeric values which indicate the age of an individual in years.
-Tenure: Number of months a client stayed with the company and the data type is numeric.
-Balance: This column contains decimal values that indicate the account balance of an individual.
-NumOfProducts: This column also contains numeric datatype and the values in it indicate the number of services or products an individual is using.
+- **Dataset Link**: [Churn_Modelling.csv](https://www.kaggle.com/code/kmalit/bank-customer-churn-prediction/data?select=Churn_Modelling.csv)
 
+### Metadata:
 
-LINK FOR THE DATASET:
-https://www.kaggle.com/code/kmalit/bank-customer-churn-prediction/data?select=Churn_Modelling.csv 
+- **Row Number**: A unique identifier for each row.
+- **Customer ID**: A unique identifier for each client.
+- **Surname**: The client's last name.
+- **CreditScore**: The client's credit card score (numeric).
+- **Geography**: The location of the customer (categorical).
+- **Gender**: The gender of the customer (categorical: Male/Female).
+- **Age**: The age of the customer (numeric).
+- **Tenure**: The number of months the client has been with the company (numeric).
+- **Balance**: The account balance of the customer (numeric).
+- **NumOfProducts**: The number of products or services the client is using (numeric).
 
+---
+
+## 💡 Objective
+
+The main objectives of this project are:
+
+1. **Analyze and visualize** the factors contributing to customer churn in the banking industry.
+2. **Build a predictive model** that determines the likelihood of a client churning, helping banks take preventive actions.
+3. Use the model to **assign probabilities** of churn, allowing customer service teams to focus on high-risk clients.
+
+---
+
+## 🚀 Workflow
+
+### 1. **Data Preprocessing:**
+- Handle missing values, encode categorical variables, and scale numerical features.
+- Analyze the data to identify correlations and important features.
+
+### 2. **Model Building:**
+- Train various machine learning models (e.g., Logistic Regression, Random Forest, XGBoost).
+- Use cross-validation to evaluate model performance and avoid overfitting.
+
+### 3. **Model Evaluation:**
+- Evaluate the model using metrics like **accuracy**, **precision**, **recall**, **F1-score**, and **ROC-AUC**.
+- Select the best-performing model and fine-tune hyperparameters.
+
+---
+
+## 🛠️ Requirements
+
+To run this project, make sure you have the following dependencies installed:
+
+- **Python 3.7+**
+- **Pandas**: For data manipulation.
+- **Scikit-learn**: For building and evaluating machine learning models.
+- **Matplotlib**: For visualizations.
+- **Seaborn**: For statistical plots.
+- **XGBoost**: For building gradient boosting models.
+
+---
+
+## 📝 How to Use
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/yourusername/credit-card-churn-prediction.git
